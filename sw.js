@@ -1,12 +1,10 @@
 const CACHE_NAME = 'fantom-v3';
 const FILES_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/logo.png',
-  '/manifest.json'
+  './index.html',
+  './logo.png',
+  './manifest.json'
 ];
 
-// Install: cache all files
 self.addEventListener('install', (e) => {
   e.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
@@ -17,7 +15,6 @@ self.addEventListener('install', (e) => {
   );
 });
 
-// Activate: clean old caches
 self.addEventListener('activate', (e) => {
   e.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -34,7 +31,6 @@ self.addEventListener('activate', (e) => {
   );
 });
 
-// Fetch: serve from cache, fallback to network
 self.addEventListener('fetch', (e) => {
   e.respondWith(
     caches.match(e.request).then((response) => {
