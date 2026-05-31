@@ -2,12 +2,12 @@
   "name": "FANTOM 1.1",
   "short_name": "FANTOM",
   "description": "Control your LILYGO T-Dongle S3 - BLE, WiFi, AI Script Generation, DuckyScript Editor",
-  "start_url": "/",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#0A0A0A",
   "theme_color": "#0A0A0A",
   "orientation": "portrait",
-  "scope": "/",
+  "scope": ".",
   "icons": [
     {
       "src": "logo.png",
